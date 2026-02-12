@@ -1,7 +1,7 @@
 # {{TOOL_DISPLAY_NAME}} CLI
 
-[![npm version](https://img.shields.io/npm/v/@marketing-clis/{{TOOL_NAME}}-cli.svg)](https://www.npmjs.com/package/@marketing-clis/{{TOOL_NAME}}-cli)
-[![CI](https://github.com/marketing-clis/{{TOOL_NAME}}-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/marketing-clis/{{TOOL_NAME}}-cli/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@funnelenvy/{{TOOL_NAME}}-cli.svg)](https://www.npmjs.com/package/@funnelenvy/{{TOOL_NAME}}-cli)
+[![CI](https://github.com/FunnelEnvy/{{TOOL_NAME}}-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/FunnelEnvy/{{TOOL_NAME}}-cli/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 {{TOOL_DESCRIPTION}}
@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install -g @marketing-clis/{{TOOL_NAME}}-cli
+npm install -g @funnelenvy/{{TOOL_NAME}}-cli
 ```
 
 ## Quick Start
@@ -62,7 +62,7 @@ Config file location: `~/.config/{{BINARY_NAME}}-cli/config.json`
 ## Development
 
 ```bash
-git clone https://github.com/marketing-clis/{{TOOL_NAME}}-cli.git
+git clone https://github.com/FunnelEnvy/{{TOOL_NAME}}-cli.git
 cd {{TOOL_NAME}}-cli
 pnpm install
 pnpm run build
@@ -71,7 +71,7 @@ pnpm run test
 
 ## Part of Marketing CLIs
 
-This tool is part of [Marketing CLIs](https://github.com/marketing-clis/marketing-clis) — open source CLIs for marketing tools that don't have them.
+This tool is part of [Marketing CLIs](https://github.com/FunnelEnvy/marketing-clis) — open source CLIs for marketing tools that don't have them.
 
 ## License
 

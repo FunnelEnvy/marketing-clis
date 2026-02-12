@@ -1,5 +1,5 @@
 {
-  "name": "@marketing-clis/output",
+  "name": "@funnelenvy/output",
   "version": "0.1.0",
   "description": "Output formatting (JSON, table, CSV) for Marketing CLIs",
   "type": "module",

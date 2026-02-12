@@ -12,11 +12,11 @@ Marketing CLIs fixes this by providing a consistent, high-quality CLI for each p
 
 | Tool | Install | Commands | Status |
 |------|---------|----------|--------|
-| [ga4-cli](https://github.com/marketing-clis/ga4-cli) — Google Analytics 4 | `npm i -g @marketing-clis/ga4-cli` | `properties` `reports` `realtime` `dimensions` `metrics` | Beta |
-| [ahrefs-cli](https://github.com/marketing-clis/ahrefs-cli) — Ahrefs SEO | `npm i -g @marketing-clis/ahrefs-cli` | `backlinks` `keywords` `domains` `site-explorer` `domain-rating` | Beta |
-| [meta-ads-cli](https://github.com/marketing-clis/meta-ads-cli) — Meta/Facebook Ads | `npm i -g @marketing-clis/meta-ads-cli` | `accounts` `campaigns` `adsets` `ads` `insights` `audiences` | Beta |
-| [mailchimp-cli](https://github.com/marketing-clis/mailchimp-cli) — Mailchimp | `npm i -g @marketing-clis/mailchimp-cli` | `lists` `members` `campaigns` `templates` `reports` `automations` | Beta |
-| [buffer-cli](https://github.com/marketing-clis/buffer-cli) — Buffer | `npm i -g @marketing-clis/buffer-cli` | `profiles` `posts` `analytics` | Beta |
+| [ga4-cli](https://github.com/FunnelEnvy/ga4-cli) — Google Analytics 4 | `npm i -g @funnelenvy/ga4-cli` | `properties` `reports` `realtime` `dimensions` `metrics` | Beta |
+| [ahrefs-cli](https://github.com/FunnelEnvy/ahrefs-cli) — Ahrefs SEO | `npm i -g @funnelenvy/ahrefs-cli` | `backlinks` `keywords` `domains` `site-explorer` `domain-rating` | Beta |
+| [meta-ads-cli](https://github.com/FunnelEnvy/meta-ads-cli) — Meta/Facebook Ads | `npm i -g @funnelenvy/meta-ads-cli` | `accounts` `campaigns` `adsets` `ads` `insights` `audiences` | Beta |
+| [mailchimp-cli](https://github.com/FunnelEnvy/mailchimp-cli) — Mailchimp | `npm i -g @funnelenvy/mailchimp-cli` | `lists` `members` `campaigns` `templates` `reports` `automations` | Beta |
+| [buffer-cli](https://github.com/FunnelEnvy/buffer-cli) — Buffer | `npm i -g @funnelenvy/buffer-cli` | `profiles` `posts` `analytics` | Beta |
 
 ## Standards
 
@@ -36,7 +36,7 @@ marketing_clis/
 ├── shared/          # Shared packages (auth, output, config, rate-limit)
 ├── generator/       # CLI generator skill and templates
 ├── registry.json    # Machine-readable index of all CLIs
-└── clis/            # Symlinks to sibling CLI repos
+└── clis/            # CLI repos (gitignored, each has own git repo)
 ```
 
 Each CLI is a fully standalone repo that can be cloned and used independently.

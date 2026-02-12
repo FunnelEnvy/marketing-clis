@@ -1,5 +1,5 @@
 {
-  "name": "@marketing-clis/{{TOOL_NAME}}-cli",
+  "name": "@funnelenvy/{{TOOL_NAME}}-cli",
   "version": "0.1.0",
   "description": "{{TOOL_DESCRIPTION}}",
   "type": "module",
@@ -20,7 +20,7 @@
   },
   "files": ["dist"],
   "keywords": ["cli", "marketing", "{{TOOL_NAME}}"],
-  "author": "Marketing CLIs Contributors",
+  "author": "FunnelEnvy",
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.3.0",

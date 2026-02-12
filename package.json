@@ -9,7 +9,7 @@
     "lint": "pnpm -r lint"
   },
   "keywords": ["cli", "marketing", "analytics", "seo", "ads", "email"],
-  "author": "Marketing CLIs Contributors",
+  "author": "FunnelEnvy",
   "license": "MIT",
   "packageManager": "pnpm@10.29.3"
 }

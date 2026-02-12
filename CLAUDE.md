@@ -21,7 +21,7 @@ This project is designed for Claude Code agent teams. The architecture naturally
 3. **Lead agent** monitors progress, synthesizes results, updates the meta-repo registry and README when teammates finish
 
 **Why this works well for agent teams:**
-- Zero file conflict risk — each teammate writes to its own `/Users/arun/dev/{tool}-cli/` directory
+- Zero file conflict risk — each teammate writes to its own `clis/{tool}-cli/` directory
 - Each CLI is fully independent — no cross-teammate dependencies after shared packages are built
 - Teammates can research APIs in parallel (the slowest part of CLI generation)
 - Lead only needs to update `registry.json` and `README.md` in the meta-repo at the end
@@ -30,12 +30,12 @@ This project is designed for Claude Code agent teams. The architecture naturally
 - Each teammate prompt must include: tool name, API docs URL, auth method, priority endpoints, and the full path to create the repo
 - Each teammate prompt must reference this CLAUDE.md for standards
 - Teammates should be told NOT to modify anything in the meta-repo — only the lead does that
-- Teammates should be told to use the shared packages from `../marketing_clis/shared/` as reference for patterns but to bundle/copy the code into their own repo
+- Teammates should be told to use the shared packages from `shared/` as reference for patterns but to bundle/copy the code into their own repo
 
 ## Architecture
 
 ```
-marketing_clis/                  # This meta-repo (GitHub: {org}/marketing-clis)
+marketing_clis/                  # This meta-repo (GitHub: FunnelEnvy/marketing-clis)
 ├── CLAUDE.md                    # Claude Code instructions (this file)
 ├── README.md                    # Public-facing index — explains project, lists all CLIs
 ├── LICENSE                      # MIT
@@ -52,26 +52,27 @@ marketing_clis/                  # This meta-repo (GitHub: {org}/marketing-clis)
 │   │   └── testing.md           # Test generation patterns
 │   └── examples/                # Reference implementations
 ├── shared/                      # Shared npm packages (bundled into CLIs at build)
-│   ├── auth/                    # @marketing-clis/auth
-│   ├── output/                  # @marketing-clis/output
-│   ├── config/                  # @marketing-clis/config
-│   └── rate-limit/              # @marketing-clis/rate-limit
-└── clis/                        # Local dev symlinks to sibling repos
-    ├── ga4-cli -> ../../ga4-cli
-    ├── ahrefs-cli -> ../../ahrefs-cli
-    ├── meta-ads-cli -> ../../meta-ads-cli
-    ├── mailchimp-cli -> ../../mailchimp-cli
-    └── buffer-cli -> ../../buffer-cli
+│   ├── auth/                    # @funnelenvy/auth
+│   ├── output/                  # @funnelenvy/output
+│   ├── config/                  # @funnelenvy/config
+│   └── rate-limit/              # @funnelenvy/rate-limit
+└── clis/                        # CLI repos (gitignored, each has own git repo)
+    ├── ga4-cli/
+    ├── ahrefs-cli/
+    ├── meta-ads-cli/
+    ├── mailchimp-cli/
+    └── buffer-cli/
 ```
 
-Each CLI lives in a **sibling directory** as its own standalone repo:
+Each CLI lives in the `clis/` directory as its own standalone git repo (gitignored by the meta-repo):
 ```
-/Users/arun/dev/marketing_clis/          # meta-repo
-/Users/arun/dev/ga4-cli/                 # standalone repo — owned by teammate 1
-/Users/arun/dev/ahrefs-cli/              # standalone repo — owned by teammate 2
-/Users/arun/dev/meta-ads-cli/            # standalone repo — owned by teammate 3
-/Users/arun/dev/mailchimp-cli/           # standalone repo — owned by teammate 4
-/Users/arun/dev/buffer-cli/              # standalone repo — owned by teammate 5
+marketing_clis/
+└── clis/
+    ├── ga4-cli/           # standalone git repo
+    ├── ahrefs-cli/        # standalone git repo
+    ├── meta-ads-cli/      # standalone git repo
+    ├── mailchimp-cli/     # standalone git repo
+    └── buffer-cli/        # standalone git repo
 ```
 
 ## GitHub Repository Structure
@@ -89,7 +90,7 @@ Each CLI is a **fully standalone** GitHub repo:
 - Repo name: `{tool}-cli` (e.g., `ga4-cli`, `ahrefs-cli`, `meta-ads-cli`)
 - Fully self-contained — anyone can clone and use without the meta-repo
 - Shared packages are copied/bundled at build time, not external deps at runtime
-- README links back to meta-repo: "Part of [Marketing CLIs](https://github.com/{org}/marketing-clis) — open source CLIs for marketing tools."
+- README links back to meta-repo: "Part of [Marketing CLIs](https://github.com/FunnelEnvy/marketing-clis) — open source CLIs for marketing tools."
 
 ### Git Init for Each Repo
 Every repo (meta + each CLI) gets:
@@ -101,7 +102,7 @@ git commit -m "Initial commit"
 
 Every repo must have these files:
 - `.gitignore` — node_modules, dist, .env, *.tgz, coverage/
-- `LICENSE` — MIT, copyright "Marketing CLIs Contributors"
+- `LICENSE` — MIT, copyright "FunnelEnvy"
 - `.github/workflows/ci.yml` — test on ubuntu/macos/windows, Node 20+
 - `.github/workflows/release.yml` — publish to npm + GitHub Releases on tag push
 
@@ -130,7 +131,7 @@ When creating a new CLI, follow this sequence:
 6. Prioritize: cover the most-used endpoints first, not every endpoint
 
 ### Phase 3: Scaffold & Implement
-1. Create the CLI repo directory as a sibling: `/Users/arun/dev/{tool}-cli/`
+1. Create the CLI repo directory: `clis/{tool}-cli/`
 2. Generate repo from the node-cli template
 3. Implement auth module first
 4. Implement commands resource-by-resource
@@ -174,7 +175,7 @@ Do NOT attempt live API calls during generation. Structure tests so they can be 
 - `pnpm` for each CLI repo (consistency)
 
 ### Naming Convention
-- npm package: `@marketing-clis/{tool}-cli`
+- npm package: `@funnelenvy/{tool}-cli`
 - Binary name: `{tool}` (e.g., `ga4`, `ahrefs`, `meta-ads`, `mailchimp`, `buffer`)
 - GitHub repo: `{tool}-cli`
 
@@ -246,7 +247,7 @@ The meta-repo README should include:
 Each CLI README must follow this structure:
 1. **Title & badges** — npm version, CI status, license
 2. **One-liner** — what it does in one sentence
-3. **Install** — `npm install -g @marketing-clis/{tool}-cli`
+3. **Install** — `npm install -g @funnelenvy/{tool}-cli`
 4. **Quick start** — 3-5 commands showing the most common workflows
 5. **Authentication** — how to set up credentials (env var, config file, `auth login`)
 6. **Command reference** — every command group with examples
@@ -274,8 +275,8 @@ Each CLI must include an `AGENTS.md` for AI agent consumption:
     {
       "tool": "ga4",
       "name": "Google Analytics 4 CLI",
-      "repo": "{org}/ga4-cli",
-      "package": "@marketing-clis/ga4-cli",
+      "repo": "FunnelEnvy/ga4-cli",
+      "package": "@funnelenvy/ga4-cli",
       "binary": "ga4",
       "status": "beta",
       "api_auth": "oauth2",

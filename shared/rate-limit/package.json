@@ -1,5 +1,5 @@
 {
-  "name": "@marketing-clis/rate-limit",
+  "name": "@funnelenvy/rate-limit",
   "version": "0.1.0",
   "description": "Rate limit detection and retry with exponential backoff for Marketing CLIs",
   "type": "module",

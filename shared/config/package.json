@@ -1,5 +1,5 @@
 {
-  "name": "@marketing-clis/config",
+  "name": "@funnelenvy/config",
   "version": "0.1.0",
   "description": "Config file management for Marketing CLIs",
   "type": "module",

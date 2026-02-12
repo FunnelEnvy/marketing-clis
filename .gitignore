@@ -6,3 +6,6 @@ coverage/
 .DS_Store
 *.log
 .turbo/
+
+# CLI repos are nested here but have their own git repos
+clis/*/

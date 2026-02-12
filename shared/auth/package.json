@@ -1,5 +1,5 @@
 {
-  "name": "@marketing-clis/auth",
+  "name": "@funnelenvy/auth",
   "version": "0.1.0",
   "description": "Standardized auth for Marketing CLIs",
   "type": "module",
