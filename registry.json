@@ -6,10 +6,10 @@
       "repo": "marketing-clis/ga4-cli",
       "package": "@marketing-clis/ga4-cli",
       "binary": "ga4",
-      "status": "planned",
+      "status": "beta",
       "api_auth": "oauth2",
       "api_docs": "https://developers.google.com/analytics/devguides/reporting/data/v1",
-      "commands": []
+      "commands": ["auth", "properties", "reports", "realtime", "dimensions", "metrics"]
     },
     {
       "tool": "ahrefs",
@@ -17,10 +17,10 @@
       "repo": "marketing-clis/ahrefs-cli",
       "package": "@marketing-clis/ahrefs-cli",
       "binary": "ahrefs",
-      "status": "planned",
+      "status": "beta",
       "api_auth": "api_key",
       "api_docs": "https://docs.ahrefs.com/",
-      "commands": []
+      "commands": ["auth", "backlinks", "keywords", "domains", "site-explorer", "domain-rating"]
     },
     {
       "tool": "meta-ads",
@@ -28,10 +28,10 @@
       "repo": "marketing-clis/meta-ads-cli",
       "package": "@marketing-clis/meta-ads-cli",
       "binary": "meta-ads",
-      "status": "planned",
+      "status": "beta",
       "api_auth": "oauth2",
       "api_docs": "https://developers.facebook.com/docs/marketing-apis/",
-      "commands": []
+      "commands": ["auth", "accounts", "campaigns", "adsets", "ads", "insights", "audiences"]
     },
     {
       "tool": "mailchimp",
@@ -39,10 +39,10 @@
       "repo": "marketing-clis/mailchimp-cli",
       "package": "@marketing-clis/mailchimp-cli",
       "binary": "mailchimp",
-      "status": "planned",
+      "status": "beta",
       "api_auth": "api_key",
       "api_docs": "https://mailchimp.com/developer/marketing/api/",
-      "commands": []
+      "commands": ["auth", "lists", "members", "campaigns", "templates", "reports", "automations"]
     },
     {
       "tool": "buffer",
@@ -50,10 +50,10 @@
       "repo": "marketing-clis/buffer-cli",
       "package": "@marketing-clis/buffer-cli",
       "binary": "buffer",
-      "status": "planned",
+      "status": "beta",
       "api_auth": "oauth2",
       "api_docs": "https://buffer.com/developers/api",
-      "commands": []
+      "commands": ["auth", "profiles", "posts", "analytics"]
     }
   ]
 }

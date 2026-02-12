@@ -10,13 +10,13 @@ Marketing CLIs fixes this by providing a consistent, high-quality CLI for each p
 
 ## CLIs
 
-| Tool | Install | Status |
-|------|---------|--------|
-| [ga4-cli](https://github.com/marketing-clis/ga4-cli) — Google Analytics 4 | `npm i -g @marketing-clis/ga4-cli` | Planned |
-| [ahrefs-cli](https://github.com/marketing-clis/ahrefs-cli) — Ahrefs SEO | `npm i -g @marketing-clis/ahrefs-cli` | Planned |
-| [meta-ads-cli](https://github.com/marketing-clis/meta-ads-cli) — Meta/Facebook Ads | `npm i -g @marketing-clis/meta-ads-cli` | Planned |
-| [mailchimp-cli](https://github.com/marketing-clis/mailchimp-cli) — Mailchimp | `npm i -g @marketing-clis/mailchimp-cli` | Planned |
-| [buffer-cli](https://github.com/marketing-clis/buffer-cli) — Buffer | `npm i -g @marketing-clis/buffer-cli` | Planned |
+| Tool | Install | Commands | Status |
+|------|---------|----------|--------|
+| [ga4-cli](https://github.com/marketing-clis/ga4-cli) — Google Analytics 4 | `npm i -g @marketing-clis/ga4-cli` | `properties` `reports` `realtime` `dimensions` `metrics` | Beta |
+| [ahrefs-cli](https://github.com/marketing-clis/ahrefs-cli) — Ahrefs SEO | `npm i -g @marketing-clis/ahrefs-cli` | `backlinks` `keywords` `domains` `site-explorer` `domain-rating` | Beta |
+| [meta-ads-cli](https://github.com/marketing-clis/meta-ads-cli) — Meta/Facebook Ads | `npm i -g @marketing-clis/meta-ads-cli` | `accounts` `campaigns` `adsets` `ads` `insights` `audiences` | Beta |
+| [mailchimp-cli](https://github.com/marketing-clis/mailchimp-cli) — Mailchimp | `npm i -g @marketing-clis/mailchimp-cli` | `lists` `members` `campaigns` `templates` `reports` `automations` | Beta |
+| [buffer-cli](https://github.com/marketing-clis/buffer-cli) — Buffer | `npm i -g @marketing-clis/buffer-cli` | `profiles` `posts` `analytics` | Beta |
 
 ## Standards
 
