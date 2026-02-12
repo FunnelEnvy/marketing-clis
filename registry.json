@@ -1,0 +1,59 @@
+{
+  "clis": [
+    {
+      "tool": "ga4",
+      "name": "Google Analytics 4 CLI",
+      "repo": "marketing-clis/ga4-cli",
+      "package": "@marketing-clis/ga4-cli",
+      "binary": "ga4",
+      "status": "planned",
+      "api_auth": "oauth2",
+      "api_docs": "https://developers.google.com/analytics/devguides/reporting/data/v1",
+      "commands": []
+    },
+    {
+      "tool": "ahrefs",
+      "name": "Ahrefs CLI",
+      "repo": "marketing-clis/ahrefs-cli",
+      "package": "@marketing-clis/ahrefs-cli",
+      "binary": "ahrefs",
+      "status": "planned",
+      "api_auth": "api_key",
+      "api_docs": "https://docs.ahrefs.com/",
+      "commands": []
+    },
+    {
+      "tool": "meta-ads",
+      "name": "Meta/Facebook Ads CLI",
+      "repo": "marketing-clis/meta-ads-cli",
+      "package": "@marketing-clis/meta-ads-cli",
+      "binary": "meta-ads",
+      "status": "planned",
+      "api_auth": "oauth2",
+      "api_docs": "https://developers.facebook.com/docs/marketing-apis/",
+      "commands": []
+    },
+    {
+      "tool": "mailchimp",
+      "name": "Mailchimp CLI",
+      "repo": "marketing-clis/mailchimp-cli",
+      "package": "@marketing-clis/mailchimp-cli",
+      "binary": "mailchimp",
+      "status": "planned",
+      "api_auth": "api_key",
+      "api_docs": "https://mailchimp.com/developer/marketing/api/",
+      "commands": []
+    },
+    {
+      "tool": "buffer",
+      "name": "Buffer CLI",
+      "repo": "marketing-clis/buffer-cli",
+      "package": "@marketing-clis/buffer-cli",
+      "binary": "buffer",
+      "status": "planned",
+      "api_auth": "oauth2",
+      "api_docs": "https://buffer.com/developers/api",
+      "commands": []
+    }
+  ]
+}

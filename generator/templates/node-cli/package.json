@@ -1,0 +1,42 @@
+{
+  "name": "@marketing-clis/{{TOOL_NAME}}-cli",
+  "version": "0.1.0",
+  "description": "{{TOOL_DESCRIPTION}}",
+  "type": "module",
+  "bin": {
+    "{{BINARY_NAME}}": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "files": ["dist"],
+  "keywords": ["cli", "marketing", "{{TOOL_NAME}}"],
+  "author": "Marketing CLIs Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.4",
+    "commander": "^12.1.0",
+    "csv-stringify": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "eslint": "^9.5.0",
+    "nock": "^14.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

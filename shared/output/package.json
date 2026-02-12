@@ -1,0 +1,30 @@
+{
+  "name": "@marketing-clis/output",
+  "version": "0.1.0",
+  "description": "Output formatting (JSON, table, CSV) for Marketing CLIs",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "lint": "eslint src/"
+  },
+  "files": ["dist"],
+  "license": "MIT",
+  "dependencies": {
+    "cli-table3": "^0.6.4",
+    "csv-stringify": "^6.5.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "marketing-clis",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Meta-repository for open source marketing CLI tools",
+  "scripts": {
+    "test": "pnpm -r test",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint"
+  },
+  "keywords": ["cli", "marketing", "analytics", "seo", "ads", "email"],
+  "author": "Marketing CLIs Contributors",
+  "license": "MIT",
+  "packageManager": "pnpm@10.29.3"
+}
