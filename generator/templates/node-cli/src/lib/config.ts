@@ -32,7 +32,7 @@ export class ConfigManager {
 
   write(config: CliConfig): void {
     mkdirSync(this.configDir, { recursive: true });
-    writeFileSync(this.configPath, JSON.stringify(config, null, 2) + '\n', 'utf-8');
+    writeFileSync(this.configPath, JSON.stringify(config, null, 2) + '\n', { encoding: 'utf-8', mode: 0o600 });
   }
 
   get<K extends keyof CliConfig>(key: K): CliConfig[K] {
