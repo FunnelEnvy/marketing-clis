@@ -42,7 +42,7 @@ Follow all four phases in order. Read `CLAUDE.md` at the repo root for the full 
    - Note response envelope format
 5. Save the inventory as `api-inventory.md` in the CLI repo
 
-Reference: `generator/prompts/api-discovery.md`
+Reference: `prompts/api-discovery.md`
 
 ### Phase 2: CLI Design
 
@@ -53,12 +53,12 @@ Reference: `generator/prompts/api-discovery.md`
 5. Write the command tree and present it to the user before writing code
 6. Prioritize the most-used endpoints — don't try to cover every endpoint
 
-Reference: `generator/prompts/cli-design.md`, `generator/prompts/auth-patterns.md`
+Reference: `prompts/cli-design.md`, `generator/prompts/auth-patterns.md`
 
 ### Phase 3: Scaffold & Implement
 
 1. Create the CLI repo at `clis/{tool}-cli/`
-2. Copy the template from `generator/templates/node-cli/` and replace placeholders:
+2. Copy the template from `templates/node-cli/` and replace placeholders:
    - `{{TOOL_NAME}}` — lowercase tool name (e.g., `hubspot`)
    - `{{BINARY_NAME}}` — CLI binary name (e.g., `hubspot`)
    - `{{TOOL_DISPLAY_NAME}}` — display name (e.g., `HubSpot`)
@@ -82,7 +82,7 @@ Reference: `generator/prompts/cli-design.md`, `generator/prompts/auth-patterns.m
 7. `git init` and initial commit
 8. Update `registry.json` in the meta-repo root to include the new CLI
 
-Reference: `generator/prompts/testing.md`
+Reference: `prompts/testing.md`
 
 ## Post-Generation Checklist
 

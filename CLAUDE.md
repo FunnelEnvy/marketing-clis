@@ -43,17 +43,15 @@ marketing_clis/                  # This meta-repo (GitHub: FunnelEnvy/marketing-
 ├── registry.json                # Machine-readable registry of all CLIs
 ├── .claude/
 │   └── skills/
-│       └── generate-cli/
-│           └── SKILL.md         # /generate-cli skill — invoke to create a new CLI
-├── generator/                   # Templates and prompt fragments used by the skill
-│   ├── templates/               # Scaffolding templates
-│   │   └── node-cli/            # Node.js/TypeScript CLI template
-│   ├── prompts/                 # Reusable prompt fragments
-│   │   ├── api-discovery.md     # How to find and parse API specs
-│   │   ├── cli-design.md        # CLI UX patterns and conventions
-│   │   ├── auth-patterns.md     # OAuth2, API key, token patterns
-│   │   └── testing.md           # Test generation patterns
-│   └── examples/                # Reference implementations
+│       └── generate-cli/        # /generate-cli skill — invoke to create a new CLI
+│           ├── SKILL.md         # Skill definition (workflow, phases, checklist)
+│           ├── prompts/         # Prompt fragments referenced by the skill
+│           │   ├── api-discovery.md
+│           │   ├── cli-design.md
+│           │   ├── auth-patterns.md
+│           │   └── testing.md
+│           └── templates/       # Scaffolding templates
+│               └── node-cli/    # Node.js/TypeScript CLI template
 ├── shared/                      # Shared npm packages (bundled into CLIs at build)
 │   ├── auth/                    # @funnelenvy/auth
 │   ├── output/                  # @funnelenvy/output
