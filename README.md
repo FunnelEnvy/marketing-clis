@@ -33,13 +33,32 @@ This meta-repo contains the shared foundation:
 
 ```
 marketing_clis/
+├── .claude/skills/  # Claude Code skills (invoke with /generate-cli)
 ├── shared/          # Shared packages (auth, output, config, rate-limit)
-├── generator/       # CLI generator skill and templates
+├── generator/       # Templates and prompt fragments for CLI generation
 ├── registry.json    # Machine-readable index of all CLIs
 └── clis/            # CLI repos (gitignored, each has own git repo)
 ```
 
 Each CLI is a fully standalone repo that can be cloned and used independently.
+
+## Generating a New CLI
+
+This repo includes a Claude Code skill that automates the full CLI creation workflow. Open the repo in [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and run:
+
+```
+/generate-cli <tool-name> <api-docs-url>
+```
+
+For example:
+
+```
+/generate-cli hubspot https://developers.hubspot.com/docs/api/overview
+```
+
+The skill walks through four phases — API discovery, CLI design, scaffold & implement, quality & docs — and produces a complete, tested CLI repo in `clis/{tool}-cli/` ready for `git push` and `npm publish`.
+
+For batch generation (multiple CLIs at once), see the Agent Teams Strategy in `CLAUDE.md`.
 
 ## Contributing
 
@@ -49,10 +68,9 @@ Open an issue describing the marketing tool, its API, and the most important com
 
 ### Build a new CLI
 
-1. Check the generator skill in `generator/SKILL.md` for the full workflow
-2. Use `generator/templates/node-cli/` as your starting scaffold
-3. Follow the standards in `CLAUDE.md`
-4. Submit a PR to add your CLI to `registry.json`
+1. Open this repo in Claude Code and run `/generate-cli <tool> <api-docs-url>`
+2. Or manually: use `generator/templates/node-cli/` as your scaffold, follow `CLAUDE.md`
+3. Submit a PR to add your CLI to `registry.json`
 
 ## License
 

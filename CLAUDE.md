@@ -5,7 +5,7 @@
 This is a meta-repository that orchestrates the creation and maintenance of open source CLI tools for marketing platforms that lack them. Each marketing tool gets its own **standalone GitHub repo** for discoverability (easier to find via search), with cross-references back to this meta-repo. This repo contains:
 
 1. **Registry** — index of all generated CLIs with status, links, and metadata
-2. **Generator skill** — a Claude Code skill that creates new CLI repos from API documentation
+2. **Generator skill** — `/generate-cli` Claude Code skill that creates new CLI repos from API documentation
 3. **Shared libraries** — common auth, output formatting, config, and rate limiting patterns
 4. **Templates** — repo scaffolding, CI/CD, docs, and release automation
 
@@ -41,8 +41,10 @@ marketing_clis/                  # This meta-repo (GitHub: FunnelEnvy/marketing-
 ├── LICENSE                      # MIT
 ├── .envrc                       # CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
 ├── registry.json                # Machine-readable registry of all CLIs
-├── generator/                   # The CLI generator skill
-│   ├── SKILL.md                 # Claude Code skill definition
+├── .claude/
+│   └── skills/
+│       └── generate-cli.md      # /generate-cli skill — invoke to create a new CLI
+├── generator/                   # Templates and prompt fragments used by the skill
 │   ├── templates/               # Scaffolding templates
 │   │   └── node-cli/            # Node.js/TypeScript CLI template
 │   ├── prompts/                 # Reusable prompt fragments
