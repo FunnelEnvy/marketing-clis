@@ -1,3 +1,7 @@
+---
+description: Generate a complete CLI tool for a marketing platform from its API documentation. Use when adding a new marketing tool CLI to the project.
+---
+
 # Generate a Marketing CLI
 
 Generate a complete CLI tool for a marketing platform from its API documentation.

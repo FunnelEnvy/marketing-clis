@@ -43,7 +43,8 @@ marketing_clis/                  # This meta-repo (GitHub: FunnelEnvy/marketing-
 ├── registry.json                # Machine-readable registry of all CLIs
 ├── .claude/
 │   └── skills/
-│       └── generate-cli.md      # /generate-cli skill — invoke to create a new CLI
+│       └── generate-cli/
+│           └── SKILL.md         # /generate-cli skill — invoke to create a new CLI
 ├── generator/                   # Templates and prompt fragments used by the skill
 │   ├── templates/               # Scaffolding templates
 │   │   └── node-cli/            # Node.js/TypeScript CLI template
