@@ -54,6 +54,17 @@
       "api_auth": "oauth2",
       "api_docs": "https://buffer.com/developers/api",
       "commands": ["auth", "profiles", "posts", "analytics"]
+    },
+    {
+      "tool": "gtm",
+      "name": "Google Tag Manager CLI",
+      "repo": "FunnelEnvy/google-tag-manager-cli",
+      "package": "@funnelenvy/google-tag-manager-cli",
+      "binary": "gtm",
+      "status": "beta",
+      "api_auth": "oauth2",
+      "api_docs": "https://developers.google.com/tag-platform/tag-manager/api/reference/rest",
+      "commands": ["auth", "accounts", "containers", "workspaces", "tags", "triggers", "variables", "versions", "environments"]
     }
   ]
 }

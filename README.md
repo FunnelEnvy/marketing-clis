@@ -17,6 +17,7 @@ Marketing CLIs fixes this by providing a consistent, high-quality CLI for each p
 | [meta-ads-cli](https://github.com/FunnelEnvy/meta-ads-cli) — Meta/Facebook Ads | `npm i -g @funnelenvy/meta-ads-cli` | `accounts` `campaigns` `adsets` `ads` `insights` `audiences` | Beta |
 | [mailchimp-cli](https://github.com/FunnelEnvy/mailchimp-cli) — Mailchimp | `npm i -g @funnelenvy/mailchimp-cli` | `lists` `members` `campaigns` `templates` `reports` `automations` | Beta |
 | [buffer-cli](https://github.com/FunnelEnvy/buffer-cli) — Buffer | `npm i -g @funnelenvy/buffer-cli` | `profiles` `posts` `analytics` | Beta |
+| [google-tag-manager-cli](https://github.com/FunnelEnvy/google-tag-manager-cli) — Google Tag Manager | `npm i -g @funnelenvy/google-tag-manager-cli` | `accounts` `containers` `workspaces` `tags` `triggers` `variables` `versions` `environments` | Beta |
 
 ## Standards
 
